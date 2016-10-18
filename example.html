@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Can Leaflet be LeafLIT?</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+	<!--<link rel="stylehseet" href="example_css.css" />-->
+	</head>
+
+	<body>
+		<div id="mapid" style="width: 100%; height: 100%; position: absolute;" tabindex="0"></div>
+		<script>
+			var mymap = L.map('mapid').setView([32.523, -117.096623], 13);
+
+			L.tileLayer('https://api.mapbox.com/styles/v1/kalmande/ciufxmct1008j2irucek2fila/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoia2FsbWFuZGUiLCJhIjoiY2l1ZnZqZWdqMDBnZzJ4bnlpeGhkd2U2dSJ9.d-0JrK8uGLFPua9Q3pGKGw', {
+	 
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+    maxZoom: 18,
+    //id: 'mapbox.streets'
+	 
+  }).addTo(mymap);
+		</script>
+	</body>
+</html> 
+
